@@ -1,5 +1,5 @@
-import os
 from dotenv import load_dotenv, find_dotenv
+import os
 from pathlib import Path
 
 load_dotenv(find_dotenv())
