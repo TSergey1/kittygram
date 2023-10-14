@@ -20,11 +20,11 @@ services:
     depends_on:
       - db
   frontend:
-    env_file: .env
     image: tyrtychnyy90/kittygram_frontend
-    command: cp -r /app/build/. /static/
+    env_file: .env
+    command: cp -r /app/build/. /frontend_static
     volumes:
-      - static:/static
+      - static:/frontend_static
   gateway:
     image: tyrtychnyy90/kittygram_gateway
     env_file: .env
